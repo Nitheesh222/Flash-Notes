@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.FlashNotes" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="android:textColorPrimary">@color/colorTextPrimary</item>
+        <item name="android:textColorSecondary">@color/colorTextSecondary</item>
+        <item name="android:statusBarColor">@color/colorBackground</item>
+        <item name="android:navigationBarColor">@color/colorBottomNav</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- Notebook card title -->
+    <style name="NotebookTitle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!-- Notebook card subtitle -->
+    <style name="NotebookSubtitle">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/colorTextSecondary</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!-- Section header style -->
+    <style name="SectionHeader">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorTextSecondary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <!-- Pill button style -->
+    <style name="PillButton">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/colorPillText</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+    <!-- Source upload button style -->
+    <style name="SourceButton">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <!-- Flashcard question text -->
+    <style name="FlashcardQuestion">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+    </style>
+
+    <!-- Flashcard answer text -->
+    <style name="FlashcardAnswer">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorTextSecondary</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:lineSpacingMultiplier">1.4</item>
+    </style>
+
+</resources>

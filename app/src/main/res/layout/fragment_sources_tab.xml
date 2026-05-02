@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="24dp">
+
+    <TextView
+        android:id="@+id/tv_curation_hub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CURATION HUB"
+        android:textColor="@color/colorSeaGreen"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_sources_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Sources"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_curation_hub" />
+
+    <TextView
+        android:id="@+id/tv_sources_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:lineSpacingExtra="4dp"
+        android:text="Manage your research materials. Add PDFs, text snippets, or web links to train your notebook's intelligence."
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sources_header" />
+
+    <TextView
+        android:id="@+id/btn_add_source"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_pill_button"
+        android:drawablePadding="16dp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Add a source"
+        android:textColor="#4A1616"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_add"
+        app:drawableTint="#4A1616"
+        app:layout_constraintTop_toBottomOf="@id/tv_sources_desc" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_sources"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_add_source" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

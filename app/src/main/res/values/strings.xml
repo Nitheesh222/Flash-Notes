@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FlashNotes</string>
+
+    <!-- Home -->
+    <string name="home_title">NotebookLM</string>
+    <string name="pro_badge">PRO</string>
+    <string name="tab_recent">Recent</string>
+    <string name="tab_shared">Shared</string>
+    <string name="tab_title">Title</string>
+    <string name="tab_downloaded">Downloaded</string>
+    <string name="create_new">Create New</string>
+    <string name="sources_format">%d source</string>
+    <string name="sources_format_plural">%d sources</string>
+
+    <!-- Add Source -->
+    <string name="add_source_heading">Create audio overviews\nfrom</string>
+    <string name="add_source_accent"> your notes</string>
+    <string name="search_hint">Find sources from the web</string>
+    <string name="or_upload">Or upload your files</string>
+    <string name="source_pdf">PDF</string>
+    <string name="source_audio">Audio</string>
+    <string name="source_image">Image</string>
+    <string name="source_website">Website</string>
+    <string name="source_youtube">YouTube</string>
+    <string name="source_copied_text">Copied text</string>
+
+    <!-- Notebook Detail -->
+    <string name="sources">Sources</string>
+    <string name="chat">Chat</string>
+    <string name="studio">Studio</string>
+    <string name="add_a_source">Add a source</string>
+
+    <!-- Studio -->
+    <string name="creative_hub">CREATIVE HUB</string>
+    <string name="studio_desc">Transform your notes into study aids. Generate flashcards, quizzes, and summaries with AI-powered tools.</string>
+    <string name="generate_new">Generate new</string>
+    <string name="audio_overview">Audio Overview</string>
+    <string name="video_overview">Video Overview</string>
+    <string name="flashcards">Flashcards</string>
+    <string name="quiz">Quiz</string>
+    <string name="infographic">Infographic</string>
+    <string name="slide_deck">Slide Deck</string>
+    <string name="generated_media">Generated media</string>
+    <string name="generating">Generating…</string>
+    <string name="generating_subtitle">Come back in a few minutes</string>
+
+    <!-- Flashcard Player -->
+    <string name="course_flashcards">Course Flashcards</string>
+    <string name="card_counter">%d / %d</string>
+    <string name="see_answer">See answer</string>
+    <string name="restart_set">Restart set</string>
+    <string name="shuffle_set">Shuffle set</string>
+    <string name="delete">Delete</string>
+
+    <!-- Chat placeholder -->
+    <string name="chat_placeholder">Ask a question about your sources…</string>
+</resources>

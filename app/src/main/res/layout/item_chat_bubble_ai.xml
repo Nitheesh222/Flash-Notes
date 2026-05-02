@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:padding="8dp">
+
+    <!-- Sender info -->
+    <ImageView
+        android:id="@+id/iv_ai_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/bg_pro_badge"
+        android:padding="4dp"
+        android:src="@drawable/ic_studio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/tv_sender_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="NOTEBOOK GUIDE"
+        android:textColor="@color/colorPrimary"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/iv_ai_icon"
+        app:layout_constraintStart_toEndOf="@id/iv_ai_icon"
+        app:layout_constraintTop_toTopOf="@id/iv_ai_icon" />
+
+    <!-- Chat Bubble -->
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/bg_notebook_card"
+        android:lineSpacingExtra="4dp"
+        android:padding="16dp"
+        android:text="Hello! I've analyzed BCA_CA2-Updated.pdf. It appears to cover advanced cloud architecture patterns. How would you like to explore this today?"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_ai_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

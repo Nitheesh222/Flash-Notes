@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.flashnotes.app.ui.home.HomeFragment"
+        android:label="Home">
+        <action
+            android:id="@+id/action_homeFragment_to_notebookDetailFragment"
+            app:destination="@id/notebookDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_addSourceBottomSheet"
+            app:destination="@id/addSourceBottomSheet" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/addSourceBottomSheet"
+        android:name="com.flashnotes.app.ui.addsource.AddSourceBottomSheet"
+        android:label="Add Source" />
+
+    <fragment
+        android:id="@+id/notebookDetailFragment"
+        android:name="com.flashnotes.app.ui.notebook.NotebookDetailFragment"
+        android:label="Notebook">
+        <action
+            android:id="@+id/action_notebookDetailFragment_to_flashcardPlayerFragment"
+            app:destination="@id/flashcardPlayerFragment" />
+        <action
+            android:id="@+id/action_notebookDetailFragment_to_addSourceBottomSheet"
+            app:destination="@id/addSourceBottomSheet" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/flashcardPlayerFragment"
+        android:name="com.flashnotes.app.ui.flashcard.FlashcardPlayerFragment"
+        android:label="Flashcards">
+        <argument
+            android:name="notebookId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+</navigation>

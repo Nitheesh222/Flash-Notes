@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:padding="8dp">
+
+    <!-- Chat Bubble -->
+    <!-- The user bubble has a dark red/brown tint. Using colorSurfaceVariant or a custom stroke -->
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:background="@drawable/bg_notebook_card"
+        android:backgroundTint="#1D1818"
+        android:lineSpacingExtra="4dp"
+        android:padding="16dp"
+        android:text="Can you summarize the key security protocols mentioned in section 4?"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

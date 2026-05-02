@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/bg_notebook_card"
+    android:padding="24dp">
+
+    <!-- Icon Area -->
+    <ImageView
+        android:id="@+id/iv_source_icon"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_notebook_card"
+        android:backgroundTint="@color/notebookIconBg"
+        android:padding="16dp"
+        android:src="@drawable/ic_pdf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/tv_badge_updated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/bg_pro_badge"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="2dp"
+        android:text="UPDATED"
+        android:textColor="@color/colorSeaGreen"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/iv_source_icon"
+        app:layout_constraintTop_toTopOf="@id/iv_source_icon" />
+
+    <TextView
+        android:id="@+id/tv_source_meta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="PDF • 2.4 MB"
+        android:textColor="@color/colorTextTertiary"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_badge_updated"
+        app:layout_constraintStart_toEndOf="@id/tv_badge_updated"
+        app:layout_constraintTop_toTopOf="@id/tv_badge_updated" />
+
+    <TextView
+        android:id="@+id/tv_source_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="BCA_CA2-Updated.pdf"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_badge_updated"
+        app:layout_constraintTop_toBottomOf="@id/tv_badge_updated" />
+
+    <TextView
+        android:id="@+id/tv_source_snippet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="&quot;This document outlines the core architectural principles fo...&quot;"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_source_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_source_name" />
+
+    <!-- Analysis Badge -->
+    <LinearLayout
+        android:id="@+id/ll_analysis_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/tv_source_snippet"
+        app:layout_constraintTop_toBottomOf="@id/tv_source_snippet">
+
+        <!-- Circular AI icon -->
+        <TextView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/bg_pro_badge"
+            android:backgroundTint="@color/colorSeaGreen"
+            android:gravity="center"
+            android:text="AI"
+            android:textColor="#162624"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="ANALYSIS READY"
+            android:textColor="@color/colorSeaGreen"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

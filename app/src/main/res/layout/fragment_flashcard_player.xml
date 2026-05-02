@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorBackground"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back"
+        app:titleTextColor="@color/colorPrimary"
+        app:title="Notebook Title">
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Session Info -->
+    <TextView
+        android:id="@+id/tv_session_active"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="SESSION ACTIVE"
+        android:textColor="@color/colorSeaGreen"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <TextView
+        android:id="@+id/tv_flashcards_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Course Flashcards"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_session_active" />
+
+    <!-- Progress Bar (simulate with view) -->
+    <LinearLayout
+        android:id="@+id/ll_progress"
+        android:layout_width="160dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/colorCardElevated"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_flashcards_title">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.33"
+            android:background="@color/colorSeaGreen" />
+    </LinearLayout>
+
+    <!-- Loading overlay shown while Gemini generates flashcards -->
+    <LinearLayout
+        android:id="@+id/loading_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/btn_prev"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_progress">
+
+        <ProgressBar
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:indeterminateTint="@color/colorSeaGreen" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Generating flashcards with AI…"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="14sp"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <!-- Flashcard Container -->
+    <FrameLayout
+        android:id="@+id/card_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_prev"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_progress">
+
+        <!-- Flashcard (Front) -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/card_front"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_notebook_card"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tv_counter_front"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 / 3"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="12sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_card_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_pro_badge"
+                android:padding="12dp"
+                android:src="@drawable/ic_flashcards"
+                app:tint="@color/colorSeaGreen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_question"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lineSpacingExtra="8dp"
+                android:text="According to the BCA Semester 2 schedule, what is the course name for MAT1202?"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/btn_see_answer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_card_icon" />
+
+            <TextView
+                android:id="@+id/btn_see_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_pill_button"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="See answer"
+                android:textColor="#4A1616"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Flashcard (Back) -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/card_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_notebook_card"
+            android:padding="24dp"
+            android:visibility="invisible"
+            android:alpha="0"
+            android:rotationY="-180">
+
+            <TextView
+                android:id="@+id/tv_counter_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 / 3"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="12sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_answer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lineSpacingExtra="8dp"
+                android:text="Discrete Mathematics"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+
+
+    <!-- Navigation buttons for switching cards -->
+    <ImageButton
+        android:id="@+id/btn_prev"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="32dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_chevron_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/colorTextSecondary" />
+
+    <ImageButton
+        android:id="@+id/btn_next"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_chevron_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/colorTextSecondary" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

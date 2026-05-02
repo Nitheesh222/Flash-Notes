@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base dark colors (Stitch dark theme) -->
+    <color name="colorBackground">#FF0B1114</color>
+    <color name="colorSurface">#FF0B1114</color>
+    <color name="colorSurfaceVariant">#FF1A242B</color>
+    <color name="colorCard">#FF1C282D</color>
+    <color name="colorCardElevated">#FF2A3A42</color>
+
+    <!-- Text -->
+    <color name="colorTextPrimary">#FFFFFFFF</color>
+    <color name="colorTextSecondary">#FF8A9DA7</color>
+    <color name="colorTextTertiary">#FF647885</color>
+    <color name="colorTextAccent">#FF4EF0C1</color>
+
+    <!-- Accent / Brand -->
+    <color name="colorPrimary">#FFFA7E7D</color> <!-- The Coral/Salmon main primary color -->
+    <color name="colorPrimaryDark">#FFD66A6A</color>
+    <color name="colorAccent">#FFFA7E7D</color>
+    <color name="colorSearchBorder">#FF2A3A42</color>
+    <color name="colorSendButton">#FFFA7E7D</color>
+    <color name="colorFaintCoral">#33FA7E7D</color> <!-- Faint coral background for selected pills -->
+
+    <!-- Gradients (unused mostly, replaced by solid colors in new design) -->
+    <color name="colorGradientStart">#FFFA7E7D</color>
+    <color name="colorGradientEnd">#FFFF9E9D</color>
+    <color name="colorGradientRedStart">#FFFA7E7D</color>
+    <color name="colorGradientRedEnd">#FFFF9E9D</color>
+
+    <!-- Status -->
+    <color name="colorCorrect">#FF4EF0C1</color> <!-- Sea green -->
+    <color name="colorIncorrect">#FFFA7E7D</color>
+
+    <!-- Bottom nav -->
+    <color name="colorBottomNav">#FF0B1114</color>
+    <color name="colorBottomNavSelected">#FFFA7E7D</color> <!-- Selected icon is coral -->
+    <color name="colorBottomNavUnselected">#FF647885</color>
+
+    <!-- Studio option row tints -->
+    <color name="studioAudioOverview">#FF1C3532</color>
+    <color name="studioVideoOverview">#FF1C2F3E</color>
+    <color name="studioFlashcards">#FF362A1F</color>
+    <color name="studioQuiz">#FF2A1C3E</color>
+    <color name="studioInfographic">#FF3A1C20</color>
+    <color name="studioSlideDeck">#FF2F351C</color>
+
+    <!-- Custom new accents -->
+    <color name="colorSeaGreen">#FF4EF0C1</color>
+    <color name="colorDarkTealAccent">#FF162624</color>
+
+    <!-- Pill / button -->
+    <color name="colorPillBg">#FF1C282D</color>
+    <color name="colorPillText">#FFFFFFFF</color>
+
+    <!-- Notebook card subtle colors -->
+    <color name="notebookCardBg">#FF1C282D</color>
+    <color name="notebookIconBg">#FF21353D</color>
+
+    <!-- Overlay / Scrim -->
+    <color name="colorScrim">#CC0C1418</color>
+
+    <!-- Pro badge / small badges -->
+    <color name="colorProBadge">#FF101B1E</color>
+    <color name="colorProBadgeText">#FFFA7E7D</color> <!-- Usually sea green or coral depending on badge -->
+
+    <!-- Tab -->
+    <color name="colorTabSelected">#FFFA7E7D</color>
+    <color name="colorTabUnselected">#FF647885</color>
+    <color name="colorTabIndicator">#00000000</color> <!-- Hidden indicator if using custom pills -->
+
+    <!-- Divider -->
+    <color name="colorDivider">#FF2A3A42</color>
+</resources>
