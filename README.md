@@ -42,8 +42,31 @@ FlashNotes is an intelligent, AI-powered Android application designed to superch
    *(Note: Never commit your API key to public repositories!)*
 6. Build and run the app on your emulator or physical device.
 
-## 📱 Screenshots
-*(Add screenshots of the Home Screen, Flashcard Player, and AI Chat here!)*
+## 📱 How It Works
+
+### 1. Organize with Notebooks
+Create and manage dedicated notebooks for different subjects or projects (e.g., *Numerical NLP Methods* or *Cloud Computing*). This keeps your study materials perfectly isolated, ensuring the AI only focuses on the specific context you need at the moment.
+<p align="center">
+  <img src="screenshots/home.png" width="300" alt="Home Screen showing notebooks">
+</p>
+
+### 2. Curate Your Sources
+Upload PDFs, text snippets, or web links directly to the **Curation Hub**. The AI instantly processes and analyzes these documents to build the core intelligence of your notebook, making them ready for deep analysis.
+<p align="center">
+  <img src="screenshots/sources.png" width="300" alt="Sources Tab showing uploaded PDFs">
+</p>
+
+### 3. Chat with Your Notes
+Say goodbye to manual searching! Use the interactive AI Chat to ask complex questions, request specific summaries, and extract key concepts directly from the sources you uploaded. The AI cites your notes for every answer.
+<p align="center">
+  <img src="screenshots/chat.png" width="300" alt="Chat interface interacting with document">
+</p>
+
+### 4. Master Topics with Flashcards
+Transform your documents into an active recall session instantly. The app generates targeted flashcards based on your materials, complete with a sleek, distraction-free player to test your knowledge.
+<p align="center">
+  <img src="screenshots/flashcards.png" width="300" alt="Interactive Flashcard Player">
+</p>
 
 ## 🤝 Contributing
 Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
